@@ -1,0 +1,23 @@
+spring:
+  jpa:
+    open-in-view: false
+  datasource:
+    primary:
+      driver-class-name: org.mariadb.jdbc.Driver
+      username: <username>
+      password: <password>
+      url: jdbc:mysql:aurora://<cluster endpoint where the writer instance is located>:<port>/<database name>?<optional parameters>
+    secondary:
+      driver-class-name: org.mariadb.jdbc.Driver
+      username: <username>
+      password: <password>
+      url: jdbc:mysql:loadbalance://<local reader instance 0 endpoint>,<local reader instance 1 endpoint>:<port>/<database name>?<optional parameters>
+
+# This section allows you to see metrics when launching the service using http://127.0.0.1:8080/monitoring/metrics
+management:
+  endpoints.web:
+    base-path: /monitoring
+    exposure.include: "*"
+  endpoint:
+    health:
+      show-details: always
