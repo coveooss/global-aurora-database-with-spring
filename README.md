@@ -3,7 +3,7 @@
 This is a small demo application showing how to use a Global Aurora database that has multiple clusters using Spring Boot.
 
 A blog post explaining how it works can be found here:
-[Using Amazon Aurora Global Databases With Spring](https://<ADD-MISSING-LINK>)
+[Using Amazon Aurora Global Databases With Spring](https://source.coveo.com/2022/02/21/global-aurora-database-with-spring/)
 
 To launch this demo application you need to:
 - Edit the [application.yml](src/main/resources/application.yml) to specify your username, password and database endpoints.
